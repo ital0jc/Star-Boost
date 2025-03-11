@@ -1,143 +1,207 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Star Boost - Alavancando Seu Negócio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
-    <nav class="navbar">
-        <div class="logo">
-            <span>Star Boost</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReviewBoost - Gestão de Avaliações</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">ReviewBoost</div>
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
         <ul class="nav-links">
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#planos">Planos</a></li>
-            <li><a href="#contato">Contato</a></li>
+          <li><a href="#inicio" class="nav-item">Início</a></li>
+          <li><a href="#como-funciona" class="nav-item">Como Funciona</a></li>
+          <li><a href="#planos" class="nav-item">Planos</a></li>
+          <li><a href="#depoimentos" class="nav-item">Depoimentos</a></li>
+          <li><a href="#contato" class="nav-item">Contato</a></li>
         </ul>
-    </nav>
+      </nav>
+    </header>
 
-    <section id="inicio" class="hero">
-        <div class="hero-content">
-            <h1>Transforme a Reputação do Seu Negócio</h1>
-            <p>Especialistas em melhorar avaliações online e construir uma presença digital confiável</p>
-            <a href="#planos" class="cta-button">Conheça Nossos Planos</a>
-        </div>
+    <section id="inicio" class="section">
+      <div class="hero">
+        <h1>Transforme a Reputação do Seu Negócio</h1>
+        <p>Especialistas em gestão de avaliações online para melhorar a imagem da sua empresa. Aumente suas avaliações positivas e recupere a confiança dos seus clientes.</p>
+        <a href="#planos" class="cta-button">Conheça Nossos Planos</a>
+      </div>
     </section>
 
-    <section id="servicos" class="services">
-        <h2>Nossos Serviços</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <i class="fas fa-star"></i>
-                <h3>Gestão de Avaliações</h3>
-                <p>Melhoramos sua média de avaliações de forma natural e progressiva</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-chart-line"></i>
-                <h3>Monitoramento</h3>
-                <p>Acompanhamento constante das avaliações e métricas do seu negócio</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-comments"></i>
-                <h3>Gestão de Respostas</h3>
-                <p>Respondemos profissionalmente a todas as avaliações recebidas</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-trophy"></i>
-                <h3>Reputação Premium</h3>
-                <p>Estratégias avançadas para alcançar e manter nota 4.5+</p>
-            </div>
+    <section class="stats-section">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">500+</div>
+          <div class="stat-label">Empresas Atendidas</div>
         </div>
+        <div class="stat-card">
+          <div class="stat-number">98%</div>
+          <div class="stat-label">Clientes Satisfeitos</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">4.8</div>
+          <div class="stat-label">Média de Avaliações</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">15k+</div>
+          <div class="stat-label">Avaliações Gerenciadas</div>
+        </div>
+      </div>
     </section>
 
-    <section id="planos" class="plans">
-        <h2>Planos</h2>
-        <div class="plans-grid">
-            <div class="plan-card">
-                <h3>Plano Básico</h3>
-                <div class="price">R$ 997/mês</div>
-                <ul>
-                    <li>1 mês de serviço</li>
-                    <li>Até 30 avaliações</li>
-                    <li>Meta: 4.0 estrelas</li>
-                    <li>Relatório mensal</li>
-                </ul>
-                <a href="#contato" class="plan-button">Contratar</a>
-            </div>
-            <div class="plan-card featured">
-                <h3>Plano Premium</h3>
-                <div class="price">R$ 1.997/mês</div>
-                <ul>
-                    <li>3 meses de serviço</li>
-                    <li>Até 100 avaliações</li>
-                    <li>Meta: 4.5 estrelas</li>
-                    <li>Relatório semanal</li>
-                </ul>
-                <a href="#contato" class="plan-button">Contratar</a>
-            </div>
-            <div class="plan-card">
-                <h3>Plano Enterprise</h3>
-                <div class="price">R$ 2.997/mês</div>
-                <ul>
-                    <li>6 meses de serviço</li>
-                    <li>Avaliações ilimitadas</li>
-                    <li>Meta: 4.8 estrelas</li>
-                    <li>Relatório diário</li>
-                </ul>
-                <a href="#contato" class="plan-button">Contratar</a>
-            </div>
+    <section id="como-funciona" class="como-funciona">
+      <h2>Como Funciona</h2>
+      <div class="steps-container">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Análise Inicial</h3>
+          <p>Avaliamos sua presença online e identificamos áreas de melhoria</p>
         </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Estratégia Personalizada</h3>
+          <p>Desenvolvemos um plano específico para seu negócio</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>Gestão Ativa</h3>
+          <p>Monitoramento e resposta rápida a todas as avaliações</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <h3>Resultados</h3>
+          <p>Acompanhamento e relatórios de crescimento</p>
+        </div>
+      </div>
     </section>
 
-    <section id="contato" class="contact">
-        <h2>Entre em Contato</h2>
-        <div class="contact-container">
-            <form id="contactForm">
-                <input type="text" placeholder="Nome" required>
-                <input type="email" placeholder="Email" required>
-                <input type="tel" placeholder="Telefone" required>
-                <select required>
-                    <option value="">Selecione um plano</option>
-                    <option value="basico">Plano Básico</option>
-                    <option value="premium">Plano Premium</option>
-                    <option value="enterprise">Plano Enterprise</option>
-                </select>
-                <textarea placeholder="Mensagem" required></textarea>
-                <button type="submit">Enviar Mensagem</button>
-            </form>
+    <section id="planos" class="section">
+      <h2>Nossos Planos</h2>
+      <div class="planos-container">
+        <div class="plano-card">
+          <h3>Básico</h3>
+          <div class="preco">R$ 299/mês</div>
+          <ul>
+            <li>Gestão de 50 avaliações</li>
+            <li>Resposta em 24h</li>
+            <li>Relatório mensal</li>
+            <li>Monitoramento básico</li>
+            <li>Suporte por email</li>
+          </ul>
+          <a href="#contato" class="plano-button">Contratar</a>
         </div>
+        <div class="plano-card destaque">
+          <h3>Profissional</h3>
+          <div class="preco">R$ 599/mês</div>
+          <ul>
+            <li>Gestão de 200 avaliações</li>
+            <li>Resposta em 12h</li>
+            <li>Relatório semanal</li>
+            <li>Estratégia personalizada</li>
+            <li>Suporte prioritário</li>
+            <li>Dashboard exclusivo</li>
+          </ul>
+          <a href="#contato" class="plano-button">Contratar</a>
+        </div>
+        <div class="plano-card">
+          <h3>Enterprise</h3>
+          <div class="preco">R$ 999/mês</div>
+          <ul>
+            <li>Gestão ilimitada</li>
+            <li>Resposta em 6h</li>
+            <li>Relatório diário</li>
+            <li>Consultoria dedicada</li>
+            <li>Suporte 24/7</li>
+            <li>API personalizada</li>
+            <li>Treinamento da equipe</li>
+          </ul>
+          <a href="#contato" class="plano-button">Contratar</a>
+        </div>
+      </div>
     </section>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Star Boost</h4>
-                <p>Transformando a presença digital do seu negócio</p>
-            </div>
-            <div class="footer-section">
-                <h4>Contato</h4>
-                <p>Email: contato@starboost.com.br</p>
-                <p>Tel: (11) 99999-9999</p>
-            </div>
-            <div class="footer-section">
-                <h4>Redes Sociais</h4>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
-                </div>
-            </div>
+    <section id="depoimentos" class="section">
+      <h2>Depoimentos</h2>
+      <div class="depoimentos-container">
+        <div class="depoimento-card">
+          <div class="estrelas">★★★★★</div>
+          <p>"Aumentamos nossa nota de 3.2 para 4.8 em apenas 3 meses! O impacto no nosso negócio foi imediato, com aumento significativo de clientes."</p>
+          <div class="cliente">
+            <strong>Restaurante Sabor & Arte</strong>
+            <span>João Silva - Proprietário</span>
+          </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Star Boost. Todos os direitos reservados.</p>
+        <div class="depoimento-card">
+          <div class="estrelas">★★★★★</div>
+          <p>"O suporte da ReviewBoost foi fundamental para reverter nossa imagem online. A equipe é extremamente profissional e dedicada."</p>
+          <div class="cliente">
+            <strong>Hotel Central</strong>
+            <span>Maria Santos - Gerente</span>
+          </div>
         </div>
+        <div class="depoimento-card">
+          <div class="estrelas">★★★★★</div>
+          <p>"Profissionalismo e resultados reais. Nossa clínica teve um aumento de 150% nas consultas após a gestão das avaliações."</p>
+          <div class="cliente">
+            <strong>Clínica Bem Estar</strong>
+            <span>Dr. Pedro Costa</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="section">
+      <h2>Entre em Contato</h2>
+      <div class="social-container">
+        <a href="https://wa.me/5511999999999" class="social-link" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+          <span>WhatsApp</span>
+          <small>Resposta em até 1h</small>
+        </a>
+        <a href="https://instagram.com/reviewboost" class="social-link" target="_blank">
+          <i class="fab fa-instagram"></i>
+          <span>Instagram</span>
+          <small>Siga nosso trabalho</small>
+        </a>
+        <a href="https://linkedin.com/company/reviewboost" class="social-link" target="_blank">
+          <i class="fab fa-linkedin"></i>
+          <span>LinkedIn</span>
+          <small>Conteúdo profissional</small>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>ReviewBoost</h4>
+          <p>Transformando a reputação digital do seu negócio</p>
+          <p>CNPJ: 00.000.000/0001-00</p>
+        </div>
+        <div class="footer-section">
+          <h4>Endereço</h4>
+          <p>Av. Paulista, 1000</p>
+          <p>São Paulo - SP</p>
+          <p>CEP: 01310-100</p>
+        </div>
+        <div class="footer-section">
+          <h4>Contato</h4>
+          <p>contato@reviewboost.com</p>
+          <p>(11) 99999-9999</p>
+          <p>Seg-Sex: 9h às 18h</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 ReviewBoost. Todos os direitos reservados.</p>
+      </div>
     </footer>
 
-    <script src="main.js"></script>
-</body>
+    <script type="module" src="/main.js"></script>
+  </body>
 </html>

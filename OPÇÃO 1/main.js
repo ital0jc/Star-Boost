@@ -1,51 +1,102 @@
-// Smooth scrolling for navigation links
+// Smooth scroll para links de navegação
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-
-// Navbar background change on scroll
-window.addEventListener('scroll', function() {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-    } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = 'none';
-    }
-});
-
-// Form submission handling
-document.getElementById('contactForm').addEventListener('submit', function(e) {
+  anchor.addEventListener('click', function (e) {
     e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
     
-    // Here you would typically send the form data to a server
-    alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
-    this.reset();
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
 });
 
-// Animation on scroll for service cards
+// Menu mobile toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  menuToggle.classList.toggle('active');
+});
+
+// Fechar menu ao clicar em um link (mobile)
+document.querySelectorAll('.nav-item').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+    menuToggle.classList.remove('active');
+  });
+});
+
+// Animação de fade-in para elementos quando aparecem na viewport
 const observerOptions = {
-    threshold: 0.1
+  threshold: 0.1
 };
 
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('fade-in');
+      observer.unobserve(entry.target);
+    }
+  });
 }, observerOptions);
 
-document.querySelectorAll('.service-card, .plan-card').forEach(card => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(50px)';
-    card.style.transition = 'all 0.6s ease-out';
-    observer.observe(card);
+// Observar elementos para animação
+document.querySelectorAll('.plano-card, .depoimento-card, .social-link, .stat-card, .step-card').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+  observer.observe(el);
+});
+
+// Classe para animação de fade-in
+const style = document.createElement('style');
+style.textContent = `
+  .fade-in {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+`;
+document.head.appendChild(style);
+
+// Contador animado para os números estatísticos
+const stats = document.querySelectorAll('.stat-number');
+
+function animateNumber(element, target) {
+  const number = parseFloat(target);
+  const increment = number / 50;
+  let current = 0;
+
+  const timer = setInterval(() => {
+    current += increment;
+    if (current >= number) {
+      element.textContent = target;
+      clearInterval(timer);
+    } else {
+      element.textContent = Math.round(current);
+      if (target.includes('+')) {
+        element.textContent += '+';
+      }
+      if (target.includes('k')) {
+        element.textContent += 'k+';
+      }
+    }
+  }, 30);
+}
+
+const statsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const target = entry.target.textContent;
+      animateNumber(entry.target, target);
+      statsObserver.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
+
+stats.forEach(stat => {
+  statsObserver.observe(stat);
 });
